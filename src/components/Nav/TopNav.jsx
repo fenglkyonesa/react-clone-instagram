@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import { Tooltip } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { users } from "../../data";
+import  InsLogo  from "../../assets/logo/instagram.png";
 import { useAsyncList } from "@react-stately/data";
 import { Autocomplete, AutocompleteItem, Avatar } from "@nextui-org/react";
 function TopNav() {
@@ -27,14 +28,14 @@ function TopNav() {
       <div className="flex justify-between items-center h-full">
         <Link to={"/"}>
           <img
-            src={"./public/logo.png"}
+            src={InsLogo}
             alt="logo"
             className="w-[100px] h-[30px] ml-4 cursor-pointer dark:hidden"
           ></img>
         </Link>
         <Link to={"/"}>
           <img
-            src={"./public/logo.png"}
+            src={InsLogo}
             alt="logo"
             className="w-[100px] h-[30px] ml-4 cursor-pointer light:block"
           ></img>

@@ -11,7 +11,7 @@ export default function App() {
         <div className="fixed hidden w-[80px] lg:w-[335px] light:bg-white md:block h-screen border-r-1  border-gray-800">
           <SideNav />
         </div>
-        <div className="fixed flex  md:hidden bottom-0 w-full gap-1 justify-space-between h-[50px] bg-black border-t-[1px] border-gray-700">
+        <div className="fixed flex gap-1 md:hidden bottom-0 w-full justify-space-between h-[50px] bg-black border-t-[1px] border-gray-700">
           <BottomNav />
         </div>
       </div>

@@ -1,32 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {Avatar} from "@nextui-org/react";
+import { Avatar } from "@nextui-org/react";
+import Home from "../../assets/navlogo/home.png";
+import Search from "../../assets/navlogo/search.png";
+import Explore from "../../assets/navlogo/explore.png";
+import Reels from "../../assets/navlogo/reel.png";
+import Message from "../../assets/navlogo/message.png";
+import Create from "../../assets/navlogo/create.png";
 export const BottomNav = () => {
   const buttons = [
     {
-      src: "../public/navlogo/home.png",
+      src: Home,
       link: "/",
-      alt: "home",
+      alt: "Home",
     },
     {
-      src: "../public/navlogo/explore.png",
+      src: Explore,
       link: "explore",
-      alt: "explore",
+      alt: "Explore",
     },
     {
-      src: "../public/navlogo/reel.png",
-      link: "reel",
-      alt: "reel",
+      src: Reels,
+      link: "reels",
+      alt: "Reels",
     },
+
     {
-      src: "../public/navlogo/create.png",
+      src: Create,
       link: "create",
-      alt: "create",
+      alt: "Create",
     },
+
     {
-      src: "../public/navlogo/message.png",
-      link: "message",
-      alt: "message",
+      src: Message,
+      link: "messages",
+      alt: "Messages",
     },
   ];
 
@@ -36,26 +44,22 @@ export const BottomNav = () => {
         return (
           <Link
             to={key === 0 ? "/" : `/${button.link}`}
-            key={key}           
+            key={key}
             className="flex w-2/12 items-center justify-center  border-gray-800 cursor-pointer hover:-translate-y-1 transition-all duration-300"
           >
-            <img 
-            src={button.src} 
-            alt={button.alt} 
-            className="w-[30px] ">
-            </img>
+            <img src={button.src} alt={button.alt} className="w-[30px] "></img>
           </Link>
         );
       })}
-        <Link
-            to={"/"}
-            className="flex items-center justify-center  border-gray-800 cursor-pointer hover:-translate-y-1 transition-all duration-300"
-          >
-                  <Avatar
-                  size="sm"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
-
-          </Link>
+      <Link
+        to={"/"}
+        className="flex items-center justify-center  border-gray-800 cursor-pointer hover:-translate-y-1 transition-all duration-300"
+      >
+        <Avatar
+          size="sm"
+          src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+        />
+      </Link>
     </>
   );
 };

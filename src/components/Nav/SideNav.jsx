@@ -2,41 +2,49 @@ import React from "react";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
+import InsLogo from "../../assets/logo/instagram.png";
+import Home from "../../assets/navlogo/home.png";
+import Search from "../../assets/navlogo/search.png";
+import Explore from "../../assets/navlogo/explore.png";
+import Reels from "../../assets/navlogo/reel.png";
+import Message from "../../assets/navlogo/message.png";
+import Notifications from "../../assets/navlogo/like.png";
+import Create from "../../assets/navlogo/create.png";
 export const SideNav = () => {
   const buttons = [
     {
-      src: "../public/navlogo/home.png",
+      src: Home,
       link: "/",
       alt: "Home",
     },
     {
-      src: "../public/navlogo/search.png",
+      src: Search,
       link: "search",
       alt: "Search",
     },
     {
-      src: "../public/navlogo/explore.png",
+      src: Explore,
       link: "explore",
       alt: "Explore",
     },
     {
-      src: "../public/navlogo/reel.png",
-      link: "reel",
+      src: Reels,
+      link: "reels",
       alt: "Reels",
     },
     {
-      src: "../public/navlogo/message.png",
-      link: "message",
-      alt: "Message",
+      src: Message,
+      link: "messages",
+      alt: "Messages",
     },
 
     {
-      src: "../public/navlogo/like.png",
+      src: Notifications,
       link: "notifications",
       alt: "Notifications",
     },
     {
-      src: "../public/navlogo/create.png",
+      src: Create,
       link: "create",
       alt: "Create",
     },
@@ -44,7 +52,7 @@ export const SideNav = () => {
   return (
     <div className="flex-col flex w-full  pl-4">
       <img
-        src="../public/logo.png"
+        src={InsLogo}
         alt="logo"
         className="cursor-pointer w-[150px] pt-10 mb-10 hidden lg:block"
       />
@@ -53,25 +61,15 @@ export const SideNav = () => {
       {buttons.map((button, key) => {
         return (
           <Link
-          key={key}
-          to={button.link}
-          className="gap-3  lg:w-[300px] h-12 mb-3 cursor-pointer flex justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300"
-        >
-          <img
-            src={button.src}
-            alt="link"
-            className="w-7 "
-
-          />
-          <span className="font-bold text-lg  hidden lg:block">{button.alt}</span>
-        </Link>
-
-
-
-
-
-
-      
+            key={key}
+            to={button.link}
+            className="gap-3  lg:w-[300px] h-12 mb-3 cursor-pointer flex justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300"
+          >
+            <img src={button.src} alt="link" className="w-7 " />
+            <span className="font-bold text-lg  hidden lg:block">
+              {button.alt}
+            </span>
+          </Link>
         );
       })}
 

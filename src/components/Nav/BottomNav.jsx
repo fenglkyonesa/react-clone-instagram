@@ -6,7 +6,7 @@ export const BottomNav = () => {
     {
       src: "../public/navlogo/home.png",
       link: "/",
-      alt: "home",
+      alt: "home1",
     },
     {
       src: "../public/navlogo/explore.png",

@@ -10,6 +10,7 @@ import Reels from "../../assets/navlogo/reel.png";
 import Message from "../../assets/navlogo/message.png";
 import Notifications from "../../assets/navlogo/like.png";
 import Create from "../../assets/navlogo/create.png";
+import More from "../../assets/navlogo/more.png";
 export const SideNav = () => {
   const buttons = [
     {
@@ -86,7 +87,7 @@ export const SideNav = () => {
 
       <button className="gap-3  lg:w-[300px] h-12 mb-3 cursor-pointer flex fixed bottom-0 justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 ">
         <img
-          src={"../public/navlogo/more.png"}
+          src={More}
           alt={"more"}
           className="w-7 "
         ></img>

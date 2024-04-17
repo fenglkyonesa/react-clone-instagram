@@ -37,11 +37,11 @@ function TopNav() {
           <img
             src={InsLogo}
             alt="logo"
-            className="w-[100px] h-[30px] ml-4 cursor-pointer light:block"
+            className="w-[90px] h-[30px] ml-2 mr-6  cursor-pointer light:block"
           ></img>
         </Link>
 
-        <div className="flex items-center w-80 gap-3">
+        <div className="flex items-center w-80 gap-2">
           <div className="flex items-center w-full">
             <Autocomplete
               inputValue={list.filterText}

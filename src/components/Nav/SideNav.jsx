@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram } from "lucide-react";
+import { Instagram } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import InsLogo from "../../assets/logo/instagram.png";
@@ -11,6 +11,7 @@ import Message from "../../assets/navlogo/message.png";
 import Notifications from "../../assets/navlogo/like.png";
 import Create from "../../assets/navlogo/create.png";
 import More from "../../assets/navlogo/more.png";
+
 export const SideNav = () => {
   const buttons = [
     {
@@ -57,7 +58,8 @@ export const SideNav = () => {
         alt="logo"
         className="cursor-pointer w-[150px] pt-10 mb-10 hidden lg:block"
       />
-      <Instagram className="cursor-pointer w-[32px] mb-10 pt-10 block lg:hidden hover:-translate-y-1 transition-all duration-300" />
+      
+      <Instagram className="cursor-pointer w-[32px] mb-10 mt-8 block lg:hidden hover:-translate-y-1 transition-all duration-300" />
 
       {buttons.map((button, key) => {
         return (
@@ -86,11 +88,7 @@ export const SideNav = () => {
       </Link>
 
       <button className="gap-3  lg:w-[300px] h-12 mb-3 cursor-pointer flex fixed bottom-0 justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 ">
-        <img
-          src={More}
-          alt={"more"}
-          className="w-7 "
-        ></img>
+        <img src={More} alt={"more"} className="w-7 "></img>
         <span className="font-bold text-lg  hidden lg:block">more</span>
       </button>
     </div>

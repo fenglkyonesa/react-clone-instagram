@@ -57,7 +57,7 @@ export const BottomNav = () => {
       >
         <Avatar
           size="sm"
-          src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+          src="https://d2u8k2ocievbld.cloudfront.net/memojis/male/2.png"
         />
       </Link>
     </>

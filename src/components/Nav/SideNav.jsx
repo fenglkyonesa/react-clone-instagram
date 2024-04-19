@@ -52,7 +52,7 @@ export const SideNav = () => {
     },
   ];
   return (
-    <div className="flex-col flex w-full  pl-4">
+    <div className="flex-col flex w-full ">
       <img
         src={InsLogo}
         alt="logo"

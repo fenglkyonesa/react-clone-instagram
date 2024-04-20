@@ -2,7 +2,7 @@ import React from "react";
 
 import { Avatar } from "@nextui-org/react";
 import { CardUser } from "../card/CardUser";
-export const Suggestion = () =>  {
+export const Suggestion = () => {
   const suggestionUsers = [
     {
       id: 1,
@@ -58,27 +58,24 @@ export const Suggestion = () =>  {
         </h1>
       </div>
 
-      {suggestionUsers.map((user) => (
-        <>
-          <div className="flex justify-between items-center pb-2 max-w-[280px] ">
-            <div className="flex items-center gap-3">
-              <CardUser
-                name={user.name}
-                username={user.username}
-                img={user.img}
-              >
-                <Avatar src={user.img} />
-              </CardUser>
-              <div>
-                <h1 className="text-white  font-bold">{user.name}</h1>
-                <h1 className="text-gray-400 ">New to Instagram</h1>
-              </div>
+      {suggestionUsers.map((user, key) => (
+        <div
+          key={key}
+          className="flex justify-between items-center pb-2 max-w-[280px] "
+        >
+          <div className="flex items-center gap-3">
+            <CardUser name={user.name} username={user.username} img={user.img}>
+              <Avatar src={user.img} />
+            </CardUser>
+            <div>
+              <h1 className="text-white  font-bold">{user.name}</h1>
+              <h1 className="text-gray-400 ">New to Instagram</h1>
             </div>
-            <button className="text-blue-400 hover:text-white font-bold text-[15px]">
-              Follow
-            </button>
           </div>
-        </>
+          <button className="text-blue-400 hover:text-white font-bold text-[15px]">
+            Follow
+          </button>
+        </div>
       ))}
 
       <div className="pt-8  max-w-[280px] text-sm font-bold text-gray-500">
@@ -90,4 +87,4 @@ export const Suggestion = () =>  {
       </div>
     </>
   );
-}
+};

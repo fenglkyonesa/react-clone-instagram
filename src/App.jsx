@@ -1,7 +1,7 @@
 import "./App.css";
 import {SideNav} from "./components/nav/SideNav";
 import {TopNav} from "./components/nav/TopNav";
-import {BottomNav} from "./components/nav/BottomNav";
+import {NavBottom} from "./components/nav/NavBottom";
 import {Feed} from "./components/feed/Feed";
 import {Suggestion} from "./components/suggestion/Suggestion";
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
           <SideNav />
         </div>
         <div className="fixed flex  gap-1 md:hidden bottom-0 w-full justify-between h-[50px] bg-black border-t-[1px] border-gray-700">
-          <BottomNav />
+          <NavBottom />
         </div>
 
         <div className="  flex flex-col flex-1 items-center   md:pt-10 pt-20  overflow-auto ">

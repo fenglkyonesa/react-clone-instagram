@@ -6,7 +6,7 @@ import Explore from "../../assets/navlogo/explore.png";
 import Reels from "../../assets/navlogo/reel.png";
 import Message from "../../assets/navlogo/message.png";
 import Create from "../../assets/navlogo/create.png";
-export const BottomNav = () => {
+export const NavBottom = () => {
   const buttons = [
     {
       src: Home,

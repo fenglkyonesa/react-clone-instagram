@@ -14,8 +14,7 @@ export default function App() {
         <div className=" fixed z-30  block md:hidden  h-[70px]  w-full light:bg-white   border-b-[1px] border-gray-700">
           <TopNav />
         </div>
-        <div className=" flex hidden  flex-col md:block  pl-3  light:bg-white w-[80px]  lg:w-[335px] h-screen border-r-1  border-gray-800">
-          <SideNav />
+       
         </div>
         <div className="fixed flex z-0 gap-1 md:hidden bottom-0 w-full justify-between h-[50px] bg-black border-t-[1px] border-gray-700">
           <BottomNav />
@@ -29,6 +28,8 @@ export default function App() {
             <Suggestion />
           </div>
         )}
+         <div className="flex  hidden flex-col md:block  pl-3  light:bg-white w-[80px]  lg:w-[335px] h-screen border-r-1  border-gray-800">
+          <SideNav />
       </div>
     </>
   );

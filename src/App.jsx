@@ -1,26 +1,34 @@
 import "./App.css";
-import { BottomNav } from "./components/Nav/BottomNav";
-import { SideNav } from "./components/Nav/SideNav";
+import { BottomNav } from "./components/nav/BottomNav";
+import { SideNav } from "./components/nav/SideNav";
 import Suggestion from "./components/suggestion/Suggestion";
-import TopNav from "./components/Nav/TopNav";
+import TopNav from "./components/nav/TopNav";
+import { Feed } from "./components/feed/Feed";
 
 export default function App() {
+  const followNum = 10;
+
   return (
     <>
-      <div className=" w-full h-screen  flex md:flex-row flex-col gap-6">
-        <TopNav />
-        <div className="pl-3 hidden md:block w-[80px] lg:w-[335px] light:bg-white  h-screen border-r-1  border-gray-800">
+      <div className=" w-full h-screen  flex flex-row justify-between gap-4 ">
+        <div className=" fixed z-30  block md:hidden  h-[70px]  w-full light:bg-white   border-b-[1px] border-gray-700">
+          <TopNav />
+        </div>
+        <div className=" flex hidden  flex-col md:block  pl-3  light:bg-white w-[80px]  lg:w-[335px] h-screen border-r-1  border-gray-800">
           <SideNav />
         </div>
-        <div className="fixed flex gap-1 md:hidden bottom-0 w-full justify-between h-[50px] bg-black border-t-[1px] border-gray-700">
+        <div className="fixed flex z-0 gap-1 md:hidden bottom-0 w-full justify-between h-[50px] bg-black border-t-[1px] border-gray-700">
           <BottomNav />
         </div>
-        <div className="flex flex-[0.6] xl:justify-end justify-center pt-20  md:pt-10 border-r-2 border-gray-800 ">
-          feed
+
+        <div className="  flex flex-col flex-1 items-center   md:pt-10 pt-20  overflow-auto ">
+          <Feed />
         </div>
-        <div className="hidden md:block felx  flex-[0.4] pt-10 max-w-[280px]">
-          <Suggestion />
-        </div>
+        {followNum !== 0 && (
+          <div className="hidden md:block felx md:justify-start  pt-10 flex-1 pl-4  border-l-1  border-gray-800">
+            <Suggestion />
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram } from 'lucide-react';
+import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import InsLogo from "../../assets/logo/instagram.png";
@@ -52,13 +52,13 @@ export const SideNav = () => {
     },
   ];
   return (
-    <div className="flex-col flex w-full ">
+    <div className="flex-col  fixed flex  ">
       <img
         src={InsLogo}
         alt="logo"
         className="cursor-pointer w-[150px] pt-10 mb-10 hidden lg:block"
       />
-      
+
       <Instagram className="cursor-pointer w-[32px] mb-10 mt-8 block lg:hidden hover:-translate-y-1 transition-all duration-300" />
 
       {buttons.map((button, key) => {

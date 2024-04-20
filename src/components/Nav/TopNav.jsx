@@ -24,7 +24,6 @@ function TopNav() {
     },
   });
   return (
-    <div className=" fixed  z-30  block md:hidden  h-[70px]  w-full light:bg-white   border-b-[1px] border-gray-700">
       <div className=" flex items-center justify-between h-full w-full">
         <Link to={"/"}>
           <img
@@ -93,7 +92,6 @@ function TopNav() {
           </Tooltip>
         </Link>
       </div>
-    </div>
   );
 }
 

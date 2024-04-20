@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import Home from "../../assets/navlogo/home.png";
-import Search from "../../assets/navlogo/search.png";
 import Explore from "../../assets/navlogo/explore.png";
 import Reels from "../../assets/navlogo/reel.png";
 import Message from "../../assets/navlogo/message.png";

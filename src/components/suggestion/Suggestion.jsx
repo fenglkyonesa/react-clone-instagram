@@ -2,7 +2,7 @@ import React from "react";
 
 import { Avatar } from "@nextui-org/react";
 import { CardUser } from "../card/CardUser";
-export default function Suggestion() {
+export const Suggestion = () =>  {
   const suggestionUsers = [
     {
       id: 1,

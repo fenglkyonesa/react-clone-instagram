@@ -6,7 +6,7 @@ import { users } from "../../data";
 import InsLogo from "../../assets/logo/instagram.png";
 import { useAsyncList } from "@react-stately/data";
 import { Autocomplete, AutocompleteItem, Avatar } from "@nextui-org/react";
-function TopNav() {
+export const TopNav = () => {
   let list = useAsyncList({
     async load({ signal, filterText }) {
       let res = await fetch(
@@ -94,5 +94,3 @@ function TopNav() {
       </div>
   );
 }
-
-export default TopNav;

@@ -1,13 +1,11 @@
 import "./App.css";
-import { BottomNav } from "./components/nav/BottomNav";
-import { SideNav } from "./components/nav/SideNav";
-import Suggestion from "./components/suggestion/Suggestion";
-import TopNav from "./components/nav/TopNav";
-import { Feed } from "./components/feed/Feed";
-
+import {SideNav} from "./components/nav/SideNav";
+import {TopNav} from "./components/nav/TopNav";
+import {BottomNav} from "./components/nav/BottomNav";
+import {Feed} from "./components/feed/Feed";
+import {Suggestion} from "./components/suggestion/Suggestion";
 export default function App() {
   const followNum = 10;
-
   return (
     <>
       <div className=" w-full h-screen  flex flex-row justify-between gap-4 ">

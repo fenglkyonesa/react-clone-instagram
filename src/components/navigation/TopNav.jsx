@@ -24,7 +24,7 @@ export const TopNav = () => {
     },
   });
   return (
-      <div className=" flex items-center justify-between h-full w-full">
+      <div className=" flex h-[70px] w-full justify-between items-center">
         <Link to={"/"}>
           <img
             src={InsLogo}
@@ -40,7 +40,7 @@ export const TopNav = () => {
           ></img>
         </Link>
 
-        <div className="flex items-center w-[50%]">
+        <div className="  w-[50%]">
           <Autocomplete
             inputValue={list.filterText}
             isLoading={list.isLoading}

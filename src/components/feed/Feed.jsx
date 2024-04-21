@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar } from "@nextui-org/react";
 import { CardUser } from "../card/CardUser";
 export const Feed = () => {
-  const followNum = 0;
+  const followNum = 10;
   const suggestionUsers = [
     {
       id: 1,
@@ -145,11 +145,10 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/female/3.png",
     },
   ];
-
   return (
     <>
       {followNum == 0 ? (
-        <div className=" max-w-[580px] h-auto flex flex-col justify-center  ">
+        <div className=" max-w-[580px] h-auto flex flex-col justify-center ">
           <h1 className="font-bold font-size:20px mb-3">Suggested for you</h1>
           {suggestionUsers.map((user, key) => (
             <div
@@ -183,10 +182,9 @@ export const Feed = () => {
               </button>
             </div>
           ))}
-          <div className="h-auto flex flex-col w-full  mt-4 text-[12px]  items-center justify-center ">
+          <div className="h-auto flex flex-col w-full  mt-4 mb-10 text-[12px]  items-center justify-center ">
             <h1>
               Meta About Blog Jobs Help API Privacy Terms Locations Instagram
-              Lite Threads Contact Uploading & Non-Users Meta Verified
             </h1>
             <h1 className="mb-4">English © 2024 Instagram from Meta</h1>
           </div>

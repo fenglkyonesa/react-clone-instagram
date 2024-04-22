@@ -80,7 +80,6 @@ export const CardUser = ({ name, username, img }) => {
         color="danger"
         isBordered
         src={img}
-        className="items-center w-[50px] h-[50px] "
       />
     </Tooltip>
   );

@@ -8,6 +8,7 @@ import { Send } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { Avatar } from "@nextui-org/react";
 import PostImg from "../../assets/post.png";
+import { Suggestion } from "../suggestion/Suggestion";
 export const Feed = () => {
   const followNum = 10;
   const suggestionUsers = [
@@ -319,92 +320,98 @@ export const Feed = () => {
         </div>
       ) : (
         <>
-          {users.map((user, key) => (
-            <div
-              key={key}
-              className="feed w-[450px] h-screen  md:ml-auto mt-4 "
-            >
-              <div className="feed_header flex flex-row justify-between items-center">
-                <div className="feed_header_left flex flex-row gap-3 items-center">
-                  <CardUser
-                    name={user.name}
-                    username={user.username}
-                    img={user.img}
-                  ></CardUser>
-                  <span className="font-bold text-[15px]">{user.name}</span>
-                  <span className="text-gray-400 font-semibold text-[15px]">
-                    •
-                  </span>
-                  <span className="text-gray-400 font-semibold text-[15px]">
-                    1周
-                  </span>
-                </div>
-                <div className="feed_header_right">
-                  <Ellipsis className="cursor-pointer" />
-                </div>
-              </div>
-              <div className="feed_main w-full mt-5">
-                <Image
-                  isZoomed
-                  radius="sm"
-                  alt="NextUI Fruit Image with Zoom"
-                  src={user.post.img}
-                  fallbackSrc="https://via.placeholder.com/300x200"
-                />
-              </div>
-              <div className="feed_footer flex flex-row justify-between items-center mt-3 cursor-pointer">
-                <div className="feed_footer_left flex flex-row gap-3 items-center   ">
-                  <Heart
-                    size={28}
-                    className="hover:-translate-y-1 transition-all duration-300"
-                  />
-                  <MessageCircle
-                    size={28}
-                    className="hover:-translate-y-1 transition-all duration-300"
-                  />
-                  <Send
-                    size={28}
-                    className="hover:-translate-y-1 transition-all duration-300"
-                  />
-                </div>
-                <div className="feed_footer_right  hover:-translate-y-1 transition-all duration-300 ">
-                  <Bookmark size={28} />
-                </div>
-              </div>
-              <div className="feed_comment flex flex-col w-full mt-3">
-                <div className="feed_comment_like font-bold text-[15px]">
-                  {user.post.likes}次点赞
-                </div>
-                <div className="feed_comment_title">
-                  <button className="font-bold text-[15px] pr-1">{user.name}</button>
-                  <span className=" font-semibold text-[15px]">
-                    {user.post.caption}
-                  </span>
-                </div>
-                <div className="feed_comment_count">
-                  <button className="text-[15px] font-semibold text-gray-400">
-                    全部{user.post.comments} 条评论
-                  </button>
-                </div>
-                <div className="feed_comment_first flex flex-row items-center justify-between ">
-                  <div className="feed_comment_first_left flex flex-row gap-1 items-center ">
-                    <span className="font-bold text-[15px]">username</span>
-                    <span className="font-semibold text-[15px]">
-                      演唱会!!!!
-                    </span>
+          <div className="feed w-full h-screen flex justify-center mt-3 gap-10  ">
+            <div className="feed_left w-[450px] h-screen  ">
+              {users.map((user, key) => (
+                <>
+                  <div className="feed_header flex flex-row justify-between items-center">
+                    <div className="feed_header_left flex flex-row gap-3 items-center">
+                      <CardUser
+                        name={user.name}
+                        username={user.username}
+                        img={user.img}
+                      ></CardUser>
+                      <span className="font-bold text-[15px]">{user.name}</span>
+                      <span className="text-gray-400 font-semibold text-[15px]">
+                        •
+                      </span>
+                      <span className="text-gray-400 font-semibold text-[15px]">
+                        1周
+                      </span>
+                    </div>
+                    <div className="feed_header_right">
+                      <Ellipsis className="cursor-pointer" />
+                    </div>
                   </div>
-                  <div className="feed_comment_first_right">
-                    <Heart
-                      size={15}
-                      className="hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  <div className="feed_main w-full mt-5">
+                    <Image
+                      isZoomed
+                      radius="sm"
+                      alt="NextUI Fruit Image with Zoom"
+                      src={user.post.img}
+                      fallbackSrc="https://via.placeholder.com/300x200"
                     />
                   </div>
-                </div>
-              </div>
-
-              <hr className=" flex mt-3 mb-4 dashed border-gray-500 " />
+                  <div className="feed_footer flex flex-row justify-between items-center mt-3 cursor-pointer">
+                    <div className="feed_footer_left flex flex-row gap-3 items-center   ">
+                      <Heart
+                        size={28}
+                        className="hover:-translate-y-1 transition-all duration-300"
+                      />
+                      <MessageCircle
+                        size={28}
+                        className="hover:-translate-y-1 transition-all duration-300"
+                      />
+                      <Send
+                        size={28}
+                        className="hover:-translate-y-1 transition-all duration-300"
+                      />
+                    </div>
+                    <div className="feed_footer_right  hover:-translate-y-1 transition-all duration-300 ">
+                      <Bookmark size={28} />
+                    </div>
+                  </div>
+                  <div className="feed_comment flex flex-col w-full mt-3">
+                    <div className="feed_comment_like font-bold text-[15px]">
+                      {user.post.likes}次点赞
+                    </div>
+                    <div className="feed_comment_title">
+                      <button className="font-bold text-[15px] pr-1">
+                        {user.name}
+                      </button>
+                      <span className=" font-semibold text-[15px]">
+                        {user.post.caption}
+                      </span>
+                    </div>
+                    <div className="feed_comment_count">
+                      <button className="text-[15px] font-semibold text-gray-400">
+                        全部{user.post.comments} 条评论
+                      </button>
+                    </div>
+                    <div className="feed_comment_first flex flex-row items-center justify-between ">
+                      <div className="feed_comment_first_left flex flex-row gap-1 items-center ">
+                        <span className="font-bold text-[15px]">username</span>
+                        <span className="font-semibold text-[15px]">
+                          演唱会!!!!
+                        </span>
+                      </div>
+                      <div className="feed_comment_first_right">
+                        <Heart
+                          size={15}
+                          className="hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <hr className=" flex mt-3 mb-4 dashed border-gray-500 " />
+                </>
+              ))}
             </div>
-          ))}
+
+            <div className="feed_right hidden md:block ">
+              <Suggestion />
+            </div>
+          </div>
         </>
       )}
     </>

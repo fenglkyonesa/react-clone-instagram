@@ -3,11 +3,13 @@ import { SideNav } from "./components/navigation/SideNav";
 import { TopNav } from "./components/navigation/TopNav";
 import { BottomNav } from "./components/navigation/BottomNav";
 import { Feed } from "./components/feed/Feed";
+import { Suggestion } from "./components/suggestion/Suggestion";
 
 export default function App() {
+  const followNum = 10;
   return (
     <>
-      <div className=" w-full h-screen  flex flex-row ">
+      <div className=" w-full h-screen  flex flex-row justify-between gap-4 ">
         <div className=" fixed md:hidden  top-0 left-0 z-999 h-[70px]  w-full  light:bg-white   border-b-[1px] border-gray-700">
           <TopNav />
         </div>
@@ -18,14 +20,10 @@ export default function App() {
           <BottomNav />
         </div>
 
-        <div className="flex flex-1 justify-between mt-16 md:mt-5 overflow-y-scroll ">
+        <div className="flex flex-col flex-1 items-center md:mt-5 mt-20 mb-14 md:mb-4 overflow-y-auto  ">
           <Feed />
         </div>
-        {/* {followNum !== 0 && (
-          <div className="hidden md:block felx md:justify-start  pt-10 flex-1 pl-4  ">
-            <Suggestion />
-          </div>
-        )} */}
+       
       </div>
     </>
   );

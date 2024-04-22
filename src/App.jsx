@@ -4,6 +4,7 @@ import { TopNav } from "./components/navigation/TopNav";
 import { BottomNav } from "./components/navigation/BottomNav";
 import { Feed } from "./components/feed/Feed";
 import { Suggestion } from "./components/suggestion/Suggestion";
+
 export default function App() {
   const followNum = 10;
   return (
@@ -19,11 +20,11 @@ export default function App() {
           <BottomNav />
         </div>
 
-        <div className="flex flex-col flex-1 items-center   md:mt-10 mt-20  overflow-auto  ">
+        <div className="flex flex-col flex-1 items-center md:mt-10 mt-20   overflow-y-auto  ">
           <Feed />
         </div>
         {followNum !== 0 && (
-          <div className="hidden md:block felx md:justify-start  pt-10 flex-1 pl-4  border-l-1  border-gray-800">
+          <div className="hidden md:block felx md:justify-start  pt-10 flex-1 pl-4  ">
             <Suggestion />
           </div>
         )}

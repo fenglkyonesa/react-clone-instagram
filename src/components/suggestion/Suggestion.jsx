@@ -65,8 +65,8 @@ export const Suggestion = () => {
         >
           <div className="flex items-center gap-3">
             <CardUser name={user.name} username={user.username} img={user.img}>
-              <Avatar src={user.img} />
             </CardUser>
+
             <div>
               <h1 className="text-white  font-bold">{user.name}</h1>
               <h1 className="text-gray-400 ">New to Instagram</h1>

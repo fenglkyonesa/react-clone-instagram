@@ -18,7 +18,13 @@ export const CardUser = ({ name, username, img }) => {
         <Card className="w-[390px] dark">
           <CardHeader className="justify-between">
             <div className="flex gap-4">
-              <Avatar isBordered radius="full" size="md" src={img} />
+              <Avatar
+                isBordered
+                radius="full"
+                size="md"
+                src={img}
+                color="danger"
+              />
 
               <div className="flex flex-col gap-1 items-start justify-center">
                 <h4 className="font-bold text-[15px]">{name}</h4>
@@ -70,7 +76,12 @@ export const CardUser = ({ name, username, img }) => {
         </Card>
       }
     >
-      <Avatar src={img} className="items-center w-[50px] h-[50px] " />
+      <Avatar
+        color="danger"
+        isBordered
+        src={img}
+        className="items-center w-[50px] h-[50px] "
+      />
     </Tooltip>
   );
 };

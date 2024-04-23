@@ -1,6 +1,6 @@
 import React from "react";
 import { Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Avatar } from "@nextui-org/react";
 import InsLogo from "../../assets/logo/instagram.png";
 import Home from "../../assets/navlogo/home.png";
@@ -60,7 +60,7 @@ export const SideNav = () => {
       />
 
       <Instagram className="cursor-pointer w-[32px] mb-10 mt-8 block lg:hidden hover:-translate-y-1 transition-all duration-300" />
-
+    
       {buttons.map((button, key) => {
         return (
           <Link

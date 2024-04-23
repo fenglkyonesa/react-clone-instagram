@@ -9,6 +9,7 @@ import { Bookmark } from "lucide-react";
 import { Avatar } from "@nextui-org/react";
 import PostImg from "../../assets/post.png";
 import { Suggestion } from "../suggestion/Suggestion";
+
 export const Feed = () => {
   const followNum = 10;
   const suggestionUsers = [
@@ -187,7 +188,7 @@ export const Feed = () => {
       img: PostImg,
       post: {
         id: 3,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: "heloow",
         likes: 9982,
         comments: 7821,
@@ -200,7 +201,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/male/2.png",
       post: {
         id: 4,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: " 但很认真",
         likes: 21,
         comments: 1523,
@@ -213,7 +214,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/female/3.png",
       post: {
         id: 5,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: "heloow",
         likes: 6667,
         comments: 5555,
@@ -226,7 +227,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/male/1.png",
       post: {
         id: 6,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: "我的爱或许不成熟",
         likes: 541,
         comments: 123,
@@ -239,7 +240,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/female/1.png",
       post: {
         id: 7,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: " 但很认真",
         likes: 432,
         comments: 55,
@@ -253,7 +254,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/female/2.png",
       post: {
         id: 8,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: "相似的人太多",
         likes: 5421,
         comments: 11523,
@@ -266,7 +267,7 @@ export const Feed = () => {
       img: "https://d2u8k2ocievbld.cloudfront.net/memojis/male/2.png",
       post: {
         id: 9,
-        img: "https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg",
+        img: PostImg,
         caption: "我也做不到太特别",
         likes: 512,
         comments: 678,
@@ -319,13 +320,12 @@ export const Feed = () => {
           </div>
         </div>
       ) : (
-        <>
           <div className="feed w-full h-screen flex justify-center mt-3 gap-10  ">
-            <div className="feed_left w-[450px] h-screen  ">
+            <div className="feed_left  max-w-[380px] h-screen  ">
               {users.map((user, key) => (
                 <>
                   <div className="feed_header flex flex-row justify-between items-center">
-                    <div className="feed_header_left flex flex-row gap-3 items-center">
+                    <div key={key}  className="feed_header_left flex flex-row gap-3 items-center">
                       <CardUser
                         name={user.name}
                         username={user.username}
@@ -412,7 +412,6 @@ export const Feed = () => {
               <Suggestion />
             </div>
           </div>
-        </>
       )}
     </>
   );

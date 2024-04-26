@@ -1,7 +1,4 @@
 import React from "react";
-import { SideNav } from "../components/navigation/SideNav";
-import { TopNav } from "../components/navigation/TopNav";
-import { BottomNav } from "../components/navigation/BottomNav";
 import { Feed } from "../components/feed/Feed";
 
 export const HomePage = () => {

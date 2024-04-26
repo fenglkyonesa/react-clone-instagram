@@ -63,16 +63,16 @@ export const SideNav = () => {
     
       {buttons.map((button, key) => {
         return (
-          <Link
+          <NavLink
             key={key}
             to={button.link}
-            className="gap-3  lg:w-[300px] h-12 mb-3 cursor-pointer flex justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300"
+            className="gap-3 lg:w-[300px] h-12 mb-3 cursor-pointer flex justify-start items-center lg:rounded-md lg:hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300"
           >
             <img src={button.src} alt="link" className="w-7 " />
             <span className="font-bold text-lg  hidden lg:block">
               {button.alt}
             </span>
-          </Link>
+          </NavLink>
         );
       })}
 

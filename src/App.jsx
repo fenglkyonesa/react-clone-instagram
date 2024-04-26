@@ -1,11 +1,11 @@
 import React from "react";
 import { HomePage } from "./pages/HomePage";
-import { ExplorePage } from "./pages/ExplorePage";
 import { Route, Routes } from "react-router-dom";
 import { TopNav } from "./components/navigation/TopNav";
 import { SideNav } from "./components/navigation/SideNav";
 import { BottomNav } from "./components/navigation/BottomNav";
 import { Reels } from "./pages/Reels";
+import { ExplorePage } from "./pages/ExplorePage";
 
 export const App = () => {
   return (
